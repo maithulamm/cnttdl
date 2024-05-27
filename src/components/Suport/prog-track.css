@@ -1,0 +1,109 @@
+ol.go169520481 {
+    margin: 0;
+    padding-bottom: 2.2rem;
+    padding-left: 0px;
+    list-style-type: none;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+ol.go169520481 li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    line-height: 4.5rem;
+    padding: 0 0.7rem;
+    cursor: pointer;
+    min-width: calc(100% / 5);
+}
+
+ol.go169520481 li span {
+    padding: 0 1.5rem;
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+@media (max-width: 650px) {
+    .go169520481 li span {
+        display: none;
+    }
+}
+
+.go169520481 em {
+    display: none;
+    font-weight: 700;
+    padding-left: 1rem;
+}
+
+@media (max-width: 650px) {
+    .go169520481 em {
+        display: inline;
+    }
+}
+
+ol.go169520481 li.go2335061104 {
+    color: silver;
+    border-bottom: 4px solid silver;
+}
+
+ol.go169520481 li.go3842760039 {
+    color: black;
+    border-bottom: 4px solid #33c3f0;
+}
+
+ol.go169520481 li.go433304200 {
+    color: black;
+    border-bottom: 4px solid #33c3f0;
+}
+
+ol.go169520481 li:after {
+    content: '\00a0\00a0';
+}
+
+ol.go169520481 li:before {
+    position: relative;
+    /* bottom: -3.7rem; */
+    float: left;
+    left: 50%;
+}
+
+ol.go169520481 li.go2335061104:before {
+    content: '\039F';
+    color: silver;
+    background-color: white;
+    width: 1.2em;
+    line-height: 1.4em;
+}
+
+ol.go169520481 li.go2335061104:hover:before {
+    color: #0fa0ce;
+}
+
+ol.go169520481 li.go3842760039:before {
+    content: '\2022';
+    color: white;
+    background-color: #33c3f0;
+    width: 1.2em;
+    line-height: 1.2em;
+    border-radius: 1.2em;
+}
+
+ol.go169520481 li.go3842760039:hover:before {
+    color: #0fa0ce;
+}
+
+ol.go169520481 li.go433304200:before {
+    content: '\2713';
+    color: white;
+    background-color: #33c3f0;
+    width: 1.2em;
+    line-height: 1.2em;
+    border-radius: 1.2em;
+}
+
+ol.go169520481 li.go433304200:hover:before {
+    color: #0fa0ce;
+}

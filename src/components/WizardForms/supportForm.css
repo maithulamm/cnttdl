@@ -1,0 +1,128 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+.onl-support_section {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 6%;
+}
+.react-form-wizard.xs .wizard-navigation .wizard-progress-with-circle {
+    height: 2px !important;
+}
+.react-form-wizard.xs .wizard-icon-circle {
+    border-width: 2px;
+}
+.react-form-wizard .form-wizard-steps span.stepTitle {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+.react-form-wizard .wizard-card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+.react-form-wizard .wizard-card-footer div {
+    margin: 10px;
+}
+
+.react-form-wizard .clearfix:after {
+    display: none !important;
+}
+.obj_select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    height: 18vh;
+    text-align: center;
+    border: 1px solid #33c3f0;
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh rgba(104, 85, 224, 0.2);
+    cursor: pointer;
+}
+.obj_select.active {
+    background-color: #33c3f0;
+    color: white;
+    box-shadow: 3px 5px 1vh rgba(102, 102, 104, 0.4);
+    position: relative;
+}
+.obj_select:hover {
+    background-color: #33c3f0;
+    color: white;
+}
+.obj_select.active span,
+.obj_select:hover span {
+    color: white;
+}
+.obj_select input[type='radio'] {
+    display: none;
+}
+.obj_select span {
+    border: none !important;
+    box-shadow: none !important;
+    color: #33c3f0;
+    font-weight: 500;
+    font-size: clamp(0.7rem, 1vw, 1.2rem);
+}
+.problem_select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    height: 18vh;
+    text-align: center;
+    border: 1px solid #33c3f0;
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh rgba(104, 85, 224, 0.2);
+    cursor: pointer;
+}
+.problem_select:hover {
+    border: 1px solid #33c3f0;
+    box-shadow: 3px 5px 1vh rgba(102, 102, 104, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.problem_select.active {
+    background-color: #33c3f0 !important;
+    border: 1px solid #33c3f0 !important;
+    color: white;
+    box-shadow: 5px 5px 1vh rgba(102, 102, 104, 0.6);
+}
+.obj_select.active::after,
+.problem_select.active::after {
+    font-family: 'Font Awesome 6 Free' !important;
+    content: '\f14a';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.3rem;
+    padding-right: 0.5rem;
+    font-size: clamp(1rem, 1vw, 1.3rem);
+    transition: all 0.3s ease;
+    color: white;
+}
+.problem_select .card-body.problem-card_body {
+    padding: 0.5rem !important;
+    min-height: 15vh;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.problem-title {
+    font-size: clamp(1rem, 1vw, 1.3rem) !important;
+}
+.problem-desc {
+    font-size: clamp(0.8rem, 1vw, 1rem) !important;
+}
+.request-info-title {
+    font-size: clamp(1rem, 1vw, 1.3rem) !important;
+}
+@media screen and (max-width: 768px) {
+    .react-form-wizard .wizard-nav-pills li,
+    .react-form-wizard .wizard-nav-pills a {
+        flex: 1 22%;
+    }
+}

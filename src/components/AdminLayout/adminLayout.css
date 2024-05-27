@@ -1,0 +1,20 @@
+.admin-layout {
+    position: relative;
+    display: flex;
+    max-height: 100vh;
+    height: 100%;
+}
+.sidebar ~ .admin-layout__container {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 256px);
+    min-height: 100vh;
+    padding: 30px;
+    transition: all 0.3s ease;
+    height: 100vh;
+    overflow-y: auto;
+}
+.sidebar.collapsed ~ .admin-layout__container {
+    width: calc(100% - 90px);
+    transition: all 0.3s ease;
+}

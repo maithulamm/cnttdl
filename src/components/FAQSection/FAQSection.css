@@ -1,0 +1,51 @@
+.FAQSection {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4% 0 10%;
+}
+.FAQSection__title {
+    color: var(--explore-color);
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.FAQ_container {
+    width: 100%;
+    justify-content: center;
+}
+.FAQSection_student--icon {
+    border-radius: 50%;
+    background-color: var(--explore-color);
+    padding: 1rem;
+}
+.accordion-item {
+}
+.accordion-header button {
+    font-weight: 500;
+    /* font-size: clamp(1rem, 3vw, 1.5rem); */
+}
+.accordion-body {
+    padding-left: 2rem !important;
+}
+.FAQSection_student {
+    position: relative;
+    text-align: center;
+}
+.divider-div {
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    background-color: var(--explore-color);
+    margin: 1rem 0;
+}
+.icon-style1 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--explore-color);
+    width: 35px;
+    height: 35px;
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+}

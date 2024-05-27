@@ -1,0 +1,15 @@
+.pagination-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    z-index: 1;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}

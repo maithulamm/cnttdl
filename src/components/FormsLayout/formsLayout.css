@@ -1,0 +1,63 @@
+.first-title {
+    color: rgb(127, 154, 230) !important;
+    position: relative;
+}
+.input-title {
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    color: var(--color-text) !important;
+    font-weight: 500;
+}
+.preview-file-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    border: 1px solid var(--color-text);
+    border-radius: 5px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.preview-file-content img {
+    width: 60%;
+    height: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.border-dashed img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.preview-file_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.required-field::after {
+    position: absolute;
+    content: '*';
+    color: red;
+    padding-left: 3px;
+}
+.ck-editor__editable_inline {
+    min-height: 400px;
+    max-height: 600px;
+}
+.ck-editor__editable_inline a {
+    color: var(--explore-color) !important;
+}
+.ck-editor__editable_inline p {
+    margin-bottom: 0;
+}

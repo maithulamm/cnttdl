@@ -1,0 +1,320 @@
+.Suport {
+    padding: 5vh 0 !important;
+}
+
+.Suport button:disabled,
+.Suport button:not(:disabled) {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    margin: 0 10px;
+    color: #555;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 1vh;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+
+.Suport button:disabled {
+    display: none;
+}
+
+.Suport button:not(:disabled):hover {
+    color: white;
+    background-color: #33c3f0;
+}
+
+.cont {
+    height: 8vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+.obj_select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    border: 1px solid #33c3f0;
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh rgba(104, 85, 224, 0.2);
+    cursor: pointer;
+}
+.obj_select:hover {
+    background-color: #33c3f0;
+    color: white;
+}
+.obj_select:hover span {
+    color: white;
+}
+.obj_select input[type='radio'] {
+    display: none;
+}
+.obj_select span {
+    border: none !important;
+    box-shadow: none !important;
+    color: #33c3f0;
+    font-weight: 500;
+    font-size: clamp(0.7rem, 1vw, 1.2rem);
+}
+
+.cont input[type='radio'] {
+    display: none;
+}
+
+.cont span {
+    cursor: pointer;
+    border: 0;
+    border-radius: 1vh;
+    font-weight: 600;
+    margin: 0 10%;
+    width: 15vw;
+    padding: 1vh 0;
+    box-shadow: 0 0 1vh rgba(104, 85, 224, 0.2);
+    transition: 0.4s;
+    color: #33c3f0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #33c3f0;
+}
+
+.cont span:hover {
+    color: white;
+    background-color: #33c3f0;
+}
+
+.cont input:checked ~ span {
+    color: white;
+    background-color: #33c3f0;
+}
+
+/* input[class="form_info"]  */
+
+.mid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mid2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mid2 h3 {
+    display: flex;
+    align-items: start;
+    width: 45%;
+    font-size: 1.5rem;
+}
+
+.mid2 p {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    margin: 0;
+    color: red;
+}
+
+.coolinput {
+    flex-direction: column;
+    position: static;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: left;
+}
+
+.coolinput label.text {
+    font-size: 0.75rem;
+    color: #33c3f0;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    left: 0;
+    margin: 0 0.6rem;
+    padding: 0 0.4rem;
+    background: #fff;
+    width: fit-content;
+    border-radius: 0.4rem;
+}
+
+.coolinput input[class='form_info'] {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.75rem;
+    border: 0.15em #33c3f0 solid;
+    border-radius: 0.4rem;
+    background: transparent;
+}
+
+.coolinput input[class='form_info']:focus {
+    outline: none;
+}
+
+.coolinput textarea[class='description'] {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.75rem;
+    border: 0.15em #33c3f0 solid;
+    border-radius: 0.4rem;
+    background: transparent;
+    width: 50vw;
+    height: 8vh;
+    word-wrap: normal;
+}
+
+.coolinput textarea[class='description']:focus {
+    outline: none;
+}
+
+/* Variation of work by @mrhyddenn for Radios */
+.container_check {
+    margin: 1rem 0;
+}
+
+.container_check input {
+    display: none;
+}
+
+.container_check ._text {
+    cursor: pointer;
+}
+
+.container_check .check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    margin: 1rem;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+
+.container_check .check:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(34, 50, 84, 0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.container_check .check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #33c3f0;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+}
+
+.container_check .check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+}
+
+.container_check .check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+}
+
+.container_check .check:hover:before {
+    opacity: 1;
+}
+
+.container_check .check:hover svg {
+    stroke: var(--accent-color, #33c3f0);
+}
+
+.container_check #cbx2:checked + .check svg {
+    stroke: var(--accent-color, #33c3f0);
+}
+
+.container_check #cbx2:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+}
+
+.container_check #cbx2:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+}
+
+.cssbuttons-io-button {
+    background: #33c3f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #33c3f0;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em !important;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 3.3em !important;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #33c3f0;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #33c3f0;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 768px) {
+    .cont span {
+        margin: 0 5%;
+        width: 50vw;
+    }
+}

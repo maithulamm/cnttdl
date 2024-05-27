@@ -1,0 +1,230 @@
+.sidebar {
+    position: relative;
+    width: 256px;
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--main-background-color);
+    padding: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+.sidebar .head {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+.user-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    border: 3px solid #9b9795;
+    transition: all 0.3s ease-in-out;
+}
+.user-img img {
+    width: 100%;
+    object-fit: cover;
+}
+.user-img:hover {
+    cursor: pointer;
+    border: 3px solid #d1cac6;
+    box-shadow: 0 2px 10px rgba(122, 122, 122, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+.user-detail .title,
+.menu .title {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-color-main) !important;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.nav {
+    flex: 1;
+}
+.user-detail .name {
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: var(--text-color-main) !important;
+}
+.menu ul li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 5px;
+}
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-main) !important;
+    text-decoration: none;
+    padding: 12px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.menu ul li > a:hover,
+.menu ul li.active > a {
+    color: #fd9758;
+    background-color: var(--main-background-color);
+}
+.menu ul li a .icon {
+    font-size: 20px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+.menu ul li a .text {
+    flex: 1;
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
+    text-wrap: nowrap;
+}
+.menu ul li .arrow {
+    font-size: 14px;
+}
+.menu .sub-menu {
+    display: none;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-left: 1px solid var(--gray);
+    opacity: 0;
+    visibility: hidden;
+    animation: slideDown 0.3s ease;
+    transition: all 0.3s ease;
+}
+.menu .sub-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: slideDown 0.3s ease;
+    transition: all 0.3s ease;
+}
+.menu .sub-menu li a {
+    padding: 10px 8px;
+    font-size: 13px;
+}
+.menu:not(:last-child) {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--gray);
+}
+.sidebar .menu-btn {
+    position: absolute;
+    right: -14px;
+    top: 3.5%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-prime);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.menu-btn .icon {
+    font-size: 1.5rem;
+    color: var(--main-background-color);
+    transition: all 0.3s ease;
+}
+.menu-btn:hover .icon {
+    color: #000;
+}
+.sidebar.collapsed {
+    width: 90px;
+    transition: all 0.3s ease;
+}
+.sidebar.collapsed .menu-btn .icon {
+    transform: rotate(180deg);
+}
+.sidebar.collapsed .user-detail {
+    display: none;
+}
+.sidebar.collapsed .menu .title {
+    text-align: center;
+}
+.sidebar.collapsed .menu ul li .arrow {
+    display: none;
+}
+.sidebar.collapsed .menu > ul > li > a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar.collapsed .menu > ul > li > a .text {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 4px;
+    color: var(--white-prime);
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+.sidebar.collapsed .menu > ul > li > a .text::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #000;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.sidebar.collapsed .menu > ul > li > a:hover .text {
+    left: 50px;
+    opacity: 1;
+    visibility: visible;
+}
+.sidebar.collapsed .menu .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid var(--gray);
+    background-color: var(--white-prime);
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+}

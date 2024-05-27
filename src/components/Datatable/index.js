@@ -1,0 +1,1 @@
+export { PostDatatable } from './PostDatatable';
